@@ -1,3 +1,26 @@
 <resources>
     <string name="app_name">EasePlan</string>
+
+    <!-- ONBOARDING -->
+    <string name="logo_desc">Logo image</string>
+
+    <string name="email_in">Enter email address</string>
+    <string name="password_in">Enter password</string>
+
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="login2">Sign in</string>
+    <string name="register2">Sign Up</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="fName">First Name</string>
+    <string name="lName">Last Name</string>
+    <string name="birthdate">Birth Date</string>
+    <string name="address">Address</string>
+
+    <!-- LANDING -->
+    <string name="home">Home</string>
+    <string name="profile">Profile</string>
+    <string name="Developer">Developer</string>
+    <string name="Settings">Settings</string>
 </resources>

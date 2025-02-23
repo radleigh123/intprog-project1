@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <style name="Theme.EasePlan" parent="android:Theme.Material.Light.NoActionBar" />
+    <style name="Theme.EasePlan" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorControlNormal">@null</item>
+        <item name="colorOnPrimary">@color/white</item> <!-- Ensures contrast -->
+        <item name="colorSecondary">@color/design_default_color_secondary</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="itemIconTint">@null</item> <!-- Prevents forced tinting -->    </style>
 </resources>

@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="com.intprog.easeplan" />
+                  <option name="mobileSdkAppId" value="1:657816544407:android:561f72be9699c43a66f5d2" />
+                  <option name="projectId" value="easeplan-7594d" />
+                  <option name="projectNumber" value="657816544407" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />
