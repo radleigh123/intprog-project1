@@ -15,9 +15,9 @@
         android:title="@string/Settings"
         android:icon="@drawable/gear"/>
 
-    <item
+    <!--<item
         android:id="@+id/developer"
         android:title="@string/Developer"
-        android:icon="@drawable/developer"/>
+        android:icon="@drawable/developer"/>-->
 
 </menu>

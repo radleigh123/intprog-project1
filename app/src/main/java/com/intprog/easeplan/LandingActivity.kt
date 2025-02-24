@@ -13,7 +13,7 @@ import com.google.firebase.auth.FirebaseAuth
 
 class LandingActivity : AppCompatActivity() {
     private lateinit var vid1: VideoView
-    private val videoURL = "android.resource://com.intprog.easeplan/${R.raw.facebook3}"
+    private val videoURL = "android.resource://com.intprog.easeplan/${R.raw.facebook2}"
 
     private lateinit var auth: FirebaseAuth
 
@@ -53,7 +53,7 @@ class LandingActivity : AppCompatActivity() {
             when (it.itemId) {
                 R.id.home -> setCurrentFragment(defaultFragment)
                 R.id.profile -> setCurrentFragment(profileFragment)
-                R.id.developer -> setCurrentFragment(developerFragment)
+//                R.id.developer -> setCurrentFragment(developerFragment)
                 R.id.settings -> setCurrentFragment(settingsFragment)
             }
             true

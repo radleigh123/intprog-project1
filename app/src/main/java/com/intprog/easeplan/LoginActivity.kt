@@ -21,6 +21,7 @@ class LoginActivity : AppCompatActivity() {
 
     private lateinit var btnLogin: Button
     private lateinit var btnRegister: Button
+    private lateinit var tbForgotPass: Button
 
     // For validation purposes on the inputs (username and password)
     private var isAllFieldsChecked = false
@@ -38,6 +39,7 @@ class LoginActivity : AppCompatActivity() {
 
         btnLogin = findViewById<Button>(R.id.btnLogin)
         btnRegister = findViewById<Button>(R.id.btnRegister)
+        tbForgotPass = findViewById<Button>(R.id.tbForgotPass)
 
         btnLogin.setOnClickListener {
             if (etEmail.text.isNullOrEmpty() || etPassword.text.isNullOrEmpty()) {
@@ -58,6 +60,14 @@ class LoginActivity : AppCompatActivity() {
             val i = Intent(this, RegisterActivity::class.java)
             startActivity(i)
         }
+
+        tbForgotPass.setOnClickListener {
+            Log.i("john", "Forgot Password Text Button is clicked")
+
+            val i = Intent(this, RegisterActivity::class.java) // TODO: ADD FORGOTPASSWORDACTIVITY
+            startActivity(i)
+        }
+
 
     }
 
@@ -82,9 +92,11 @@ class LoginActivity : AppCompatActivity() {
 
     private fun validateInputs(): Boolean {
         val password = etPassword.text
+        val emailLayout = findViewById<com.google.android.material.textfield.TextInputLayout>(R.id.textInputLayoutEmail)
 
         if (!EMAIL_ADDRESS.matcher(etEmail.text).matches()) {
-            etEmail.error = "Email is not valid"
+            emailLayout.error = "Email is not valid"
+
             return false
         }
 

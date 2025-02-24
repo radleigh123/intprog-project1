@@ -12,36 +12,35 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.07" />
+        app:layout_constraintGuide_percent="0.05" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_end"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.93" />
+        app:layout_constraintGuide_percent="0.95" />
 
     <!-- Logo -->
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
         android:contentDescription="@string/logo_desc"
-        android:src="@drawable/logo"
-        app:layout_constraintStart_toStartOf="@id/guideline_start"
-        app:layout_constraintEnd_toEndOf="@id/guideline_end"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="50dp"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/login_hero" />
 
     <!-- Title -->
     <TextView
         android:id="@+id/textTitle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/app_name"
+        android:text="@string/welcome_top"
         android:textSize="24sp"
         android:textStyle="bold"
-        android:gravity="center"
         app:layout_constraintTop_toBottomOf="@id/logo"
         app:layout_constraintStart_toStartOf="@id/guideline_start"
         app:layout_constraintEnd_toEndOf="@id/guideline_end"
@@ -49,14 +48,19 @@
 
     <!-- Email Field -->
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayoutUser"
+        android:id="@+id/textInputLayoutEmail"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="@id/guideline_start"
         app:layout_constraintEnd_toEndOf="@id/guideline_end"
         app:layout_constraintTop_toBottomOf="@id/textTitle"
         android:layout_marginTop="20dp"
-        app:endIconMode="clear_text">
+        app:endIconMode="clear_text"
+        app:errorEnabled="true"
+        app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Large"
+        app:boxStrokeColor="@color/selected"
+        app:hintTextColor="@color/selected"
+        >
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etEmail"
@@ -73,43 +77,99 @@
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="@id/guideline_start"
         app:layout_constraintEnd_toEndOf="@id/guideline_end"
-        app:layout_constraintTop_toBottomOf="@id/textInputLayoutUser"
-        android:layout_marginTop="20dp"
-        app:endIconMode="password_toggle">
+        app:layout_constraintTop_toBottomOf="@id/textInputLayoutEmail"
+        app:endIconMode="password_toggle"
+        app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Large"
+        app:boxStrokeColor="@color/selected"
+        app:hintTextColor="@color/selected"
+        >
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/password_in"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:importantForAutofill="no"
+            />
     </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Forgot Password Text Button -->
+    <Button
+        style="@style/Widget.Material3.Button.TextButton"
+        android:id="@+id/tbForgotPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/forgot_password"
+        app:layout_constraintStart_toStartOf="@id/guideline_start"
+        app:layout_constraintTop_toBottomOf="@id/textInputLayoutPass"
+        android:paddingHorizontal="0dp"
+        android:textColor="@color/selected"
+        android:backgroundTint="@color/transparent"
+        />
 
     <!-- Login Button -->
     <Button
+        style="@style/Widget.Material3.Button.ElevatedButton"
         android:id="@+id/btnLogin"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/login2"
         android:textAllCaps="true"
         android:textSize="16sp"
+        android:textColor="@color/white"
         android:layout_marginTop="30dp"
         app:layout_constraintStart_toStartOf="@id/guideline_start"
         app:layout_constraintEnd_toEndOf="@id/guideline_end"
-        app:layout_constraintTop_toBottomOf="@id/textInputLayoutPass" />
+        app:layout_constraintTop_toBottomOf="@id/tbForgotPass"
+        app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Medium"
+        android:paddingVertical="13dp"
+        android:backgroundTint="@color/selected"
+        android:layout_marginHorizontal="20dp"
+        />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@id/guideline_start"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end"
+        app:layout_constraintTop_toBottomOf="@id/btnLogin"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/register_member"
+            android:textColor="@color/neutral_dark"
+            />
+        <Button
+            style="@style/Widget.Material3.Button.TextButton"
+            android:id="@+id/btnRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/register3"
+            android:textColor="@color/selected"
+            android:paddingHorizontal="0dp"
+            android:layout_marginStart="5dp"
+            android:backgroundTint="@color/transparent"
+            />
+    </LinearLayout>
 
     <!-- Register as a clickable TextView -->
-    <Button
+    <!--<Button
+        style="@style/Widget.Material3.Button.ElevatedButton"
         android:id="@+id/btnRegister"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/register2"
-        android:textSize="16sp"
         android:textAllCaps="true"
-        android:backgroundTint="@color/teal_700"
+        android:textSize="16sp"
+        android:layout_marginTop="10dp"
         app:layout_constraintTop_toBottomOf="@id/btnLogin"
         app:layout_constraintStart_toStartOf="@id/guideline_start"
         app:layout_constraintEnd_toEndOf="@id/guideline_end"
-        android:layout_marginTop="10dp" />
+        />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
