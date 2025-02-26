@@ -8,6 +8,9 @@ import android.widget.MediaController
 import android.widget.VideoView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import androidx.navigation.NavController
+import androidx.navigation.findNavController
+import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
 
@@ -28,7 +31,7 @@ class LandingActivity : AppCompatActivity() {
         mediaController.setAnchorView(vid1)
         mediaController.setMediaPlayer(vid1)
         vid1.setMediaController(mediaController)
-        vid1.start()
+//        vid1.start()
 
         vid1.setOnPreparedListener { mp -> mp.isLooping = true; };
 
@@ -42,9 +45,10 @@ class LandingActivity : AppCompatActivity() {
 
         val bottomNavigationView: BottomNavigationView = findViewById(R.id.bottomNavigationView)
 
+        bottomNavigationView.itemIconTintList = null // WORKAROUND overriding to null to show icon's original color
+
         val defaultFragment = DefaultFragment()
         val profileFragment = ProfileFragment()
-        val developerFragment = DeveloperFragment()
         val settingsFragment = SettingsFragment()
 
         setCurrentFragment(defaultFragment)
@@ -53,7 +57,6 @@ class LandingActivity : AppCompatActivity() {
             when (it.itemId) {
                 R.id.home -> setCurrentFragment(defaultFragment)
                 R.id.profile -> setCurrentFragment(profileFragment)
-//                R.id.developer -> setCurrentFragment(developerFragment)
                 R.id.settings -> setCurrentFragment(settingsFragment)
             }
             true
@@ -62,7 +65,7 @@ class LandingActivity : AppCompatActivity() {
 
     private fun setCurrentFragment(fragment: Fragment) =
         supportFragmentManager.beginTransaction().apply {
-            replace(R.id.flFragment, fragment)
+            replace(R.id.nav_host_fragment_container, fragment)
             commit()
         }
 

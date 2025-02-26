@@ -3,17 +3,20 @@
     <item
         android:id="@+id/home"
         android:title="@string/home"
-        android:icon="@drawable/home"/>
+        android:icon="@drawable/home"
+        />
 
     <item
         android:id="@+id/profile"
         android:title="@string/profile"
-        android:icon="@drawable/user"/>
+        android:icon="@drawable/user"
+        />
 
     <item
         android:id="@+id/settings"
         android:title="@string/Settings"
-        android:icon="@drawable/gear"/>
+        android:icon="@drawable/gear"
+        />
 
     <!--<item
         android:id="@+id/developer"

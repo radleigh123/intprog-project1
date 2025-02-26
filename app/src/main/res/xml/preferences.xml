@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <SwitchPreferenceCompat
+        app:key="theme_dark"
+        app:title="Enable dark mode"
+        app:defaultValue="false"
+        />
+
+    <Preference
+        app:key="feedback"
+        android:title="Send feedback"
+        android:summary="Report technical issues or suggest new features"
+        />
+
+    <Preference
+        app:key="developer"
+        android:title="About"
+        android:summary="Learn about the authors"
+        />
+
+    <Preference
+        app:key="logOut"
+        android:title="Log Out"
+        />
+
+
+
+</androidx.preference.PreferenceScreen>

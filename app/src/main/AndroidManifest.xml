@@ -16,6 +16,12 @@
         android:theme="@style/Theme.EasePlan"
         tools:targetApi="31">
         <activity
+            android:name=".landing.EditProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DeveloperActivity"
+            android:exported="false" />
+        <activity
             android:name=".LoginActivity"
             android:exported="false" />
         <activity
@@ -26,8 +32,8 @@
             android:exported="false" />
         <activity
             android:name=".SplashActivity"
-            android:theme="@style/Theme.Design.NoActionBar"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/Theme.Design.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

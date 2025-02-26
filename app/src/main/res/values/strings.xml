@@ -35,4 +35,12 @@
     <string name="profile">Profile</string>
     <string name="Developer">Developer</string>
     <string name="Settings">Settings</string>
+
+    <!-- DEFAULT -->
+    <string name="land_hero_icon_desc">Icon of hero</string>
+    <string name="land_hero_text_big">Nothing here. For now.</string>
+    <string name="land_hero_text">Lorem ipsum dolor elit nullam lorem est,</string>
+    <string name="land_hero_button">Start a Plan</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

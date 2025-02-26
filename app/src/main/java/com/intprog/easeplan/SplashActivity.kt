@@ -9,6 +9,7 @@ import android.os.Looper
 import android.widget.VideoView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
@@ -17,6 +18,14 @@ class SplashActivity : AppCompatActivity() {
     private val videoURL = "android.resource://com.intprog.easeplan/${R.raw.splash_animation}"
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        // Loading dark mode
+        val sharedPreferences = getSharedPreferences("AppPrefs", MODE_PRIVATE)
+        val isDarkMode = sharedPreferences.getBoolean("dark_mode", false)
+
+        AppCompatDelegate.setDefaultNightMode(
+            if (isDarkMode) AppCompatDelegate.MODE_NIGHT_YES else AppCompatDelegate.MODE_NIGHT_NO
+        )
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 

@@ -10,9 +10,12 @@
     <color name="colorAccent">#895FD6</color>
 
     <!-- Custom style -->
+    <color name="neutral_lightest">#F9F9F9</color>
+    <color name="neutral_lighter">#99EBEBEB</color>
     <color name="neutral_light">#C5C6CC</color>
     <color name="neutral_dark">#71727A</color>
     <color name="selected">#006FFD</color>
+    <color name="error">#FD0000</color>
 
     <!-- Core -->
     <color name="transparent">#00FFFFFF</color>
