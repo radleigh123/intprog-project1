@@ -15,8 +15,8 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
 
 class LandingActivity : AppCompatActivity() {
-    private lateinit var vid1: VideoView
-    private val videoURL = "android.resource://com.intprog.easeplan/${R.raw.facebook2}"
+//    private lateinit var vid1: VideoView
+//    private val videoURL = "android.resource://com.intprog.easeplan/${R.raw.facebook2}"
 
     private lateinit var auth: FirebaseAuth
 
@@ -24,16 +24,16 @@ class LandingActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_landing)
 
-        vid1 = findViewById<VideoView>(R.id.vid1)
+        /*vid1 = findViewById<VideoView>(R.id.vid1)
         val uri = Uri.parse(videoURL)
         vid1.setVideoURI(uri)
         val mediaController = MediaController(this)
         mediaController.setAnchorView(vid1)
         mediaController.setMediaPlayer(vid1)
         vid1.setMediaController(mediaController)
-//        vid1.start()
+        vid1.start()
 
-        vid1.setOnPreparedListener { mp -> mp.isLooping = true; };
+        vid1.setOnPreparedListener { mp -> mp.isLooping = true; }*/;
 
         auth = FirebaseAuth.getInstance()
 //        auth.signOut()

@@ -48,8 +48,8 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/empty_image"
-                    android:scaleType="centerCrop"
+                    android:src="@drawable/placeholder"
+                    android:scaleType="centerInside"
                     android:contentDescription="@string/land_hero_icon_desc"
                     />
             </androidx.cardview.widget.CardView>

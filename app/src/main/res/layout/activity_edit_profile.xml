@@ -97,6 +97,7 @@
             app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Large"
             app:boxStrokeColor="@color/selected"
             app:hintTextColor="@color/selected"
+            android:visibility="gone"
             >
 
             <com.google.android.material.textfield.TextInputEditText
